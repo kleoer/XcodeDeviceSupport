@@ -1,5 +1,5 @@
 # XcodeDeviceSupport
-Add Xcode device support
+Add Xcode support iOS 6 & iOS 7 devices
 
 run
 -----
