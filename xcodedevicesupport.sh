@@ -43,7 +43,7 @@ function find_need_disk_image()
 	for image in $@; do
 		path="${XCODE_DEVICE_SUPPORT_PATH}/${image}"
 		if [[ ! -d $path ]]; then
-			need_images[${#need_images[@]}]=$IOS60
+			need_images[${#need_images[@]}]=$image
 		fi
 	done
 	
