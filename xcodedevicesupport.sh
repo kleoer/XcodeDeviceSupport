@@ -168,6 +168,11 @@ function run()
 	add_deployment_target_suggested_values $SUPPORT_SDK_VERSION
 }
 
-run
+if [[ -d $XCODE_DEVICE_SUPPORT_PATH ]]; then
+	run
+else
+	echo "Xcode not found"
+fi
+
 
 
