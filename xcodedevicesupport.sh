@@ -149,7 +149,7 @@ function add_deployment_target_suggested_values()
 	for image in $add_images; do
 
 		if [ $shuold_noti = true ]; then
-			echo "update setting need use root user, please input your root password"
+			echo "Update setting need use root user, please input your root password"
 			shuold_noti=false
 		fi
 		exec_script="sudo /usr/libexec/PlistBuddy -c 'Add:DefaultProperties:DEPLOYMENT_TARGET_SUGGESTED_VALUES:0 string \"${image}\"' ${SDK_SETTINGS_PLIST_PATH}"
@@ -174,6 +174,7 @@ function run()
 
 if [[ -d $XCODE_DEVICE_SUPPORT_PATH ]]; then
 	run
+	echo "Operation finished, please restart your Xcode"
 else
 	echo "Xcode not found"
 fi
