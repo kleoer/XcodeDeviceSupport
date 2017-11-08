@@ -125,9 +125,8 @@ function unzip_disk_images()
 {
 	for image in $@; do
 		cache_path="${DISK_IMAGE_CACHE_PATH}/${image}.zip"
-		destination_path="${XCODE_DEVICE_SUPPORT_PATH}/${image}"
 
-		sudo unzip -o $cache_path -d $destination_path
+		sudo unzip -o $cache_path -d $XCODE_DEVICE_SUPPORT_PATH > /dev/null
 	done
 }
 
